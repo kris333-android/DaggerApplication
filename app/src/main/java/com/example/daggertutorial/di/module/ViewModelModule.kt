@@ -1,0 +1,19 @@
+package com.example.daggertutorial.di.module
+
+import androidx.lifecycle.ViewModel
+import com.example.daggertutorial.viewmodel.MainViewModel
+import dagger.Binds
+import dagger.BindsInstance
+import dagger.Module
+import dagger.Provides
+import dagger.multibindings.ClassKey
+import dagger.multibindings.IntoMap
+
+@Module
+abstract class ViewModelModule {
+
+    @Binds
+    @ClassKey(MainViewModel::class)
+    @IntoMap
+    abstract fun bindMainViewModel(mainViewModel: MainViewModel): ViewModel
+}
