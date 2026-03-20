@@ -54,15 +54,22 @@ dependencies {
     implementation("com.google.dagger:dagger:2.59.1")
     kapt("com.google.dagger:dagger-compiler:2.59.1")
 
+/*
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
     kapt(libs.androidx.room.compiler)
+*/
 
+/*
     implementation(libs.com.squareup.retrofit)
     implementation(libs.com.squareup.retrofit.converter.gson)
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+*/
     implementation(libs.coroutines.core)
     implementation(libs.coroutines.android)
+
+    implementation(project(":domain"))
+    implementation(project(":core-data"))
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
